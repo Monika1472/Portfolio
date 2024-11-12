@@ -1,0 +1,126 @@
+/* Container for the whole page with a background image */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  animation: backgroundFade 3s ease-in-out infinite alternate;
+}
+
+/* Box to align content inside */
+.about-box {
+  padding: 30px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(5px); /* Adds glassmorphism effect */
+  /*background-color: rgba(16, 184, 199, 0.9); Semi-transparent background */
+  background-image: url('../../Assets/delicate-pink-white.jpg'); 
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Headings styling */
+.about-box h3,
+.about-box h4 {
+  margin-bottom: 20px;
+   color: hsl(0, 90%, 60%); 
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+/* Paragraph text */
+.about-box p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+   color:   #0d2bf0; 
+  animation: fadeInText 1.8s ease-in-out;
+}
+
+/* Personal Information items */
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideInFromRight 1.2s ease-in-out;
+}
+
+.info-item {
+  text-align: left;
+  font-size: 1rem;
+  color: #0d2bf0; 
+  transition: transform 0.3s, color 0.3s;
+}
+
+.info-item strong {
+  color: #070707;
+}
+
+/* Hover effect on personal info items */
+.info-item:hover {
+  transform: scale(1.05);
+  color: #0a0a0a;
+}
+
+/* Animations */
+
+/* Background color fading */
+@keyframes backgroundFade {
+  0% {
+      filter: brightness(0.9);
+  }
+  100% {
+      filter: brightness(1.1);
+  }
+}
+
+/* Fade-in effect for the box */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Slide-in effect from left */
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Slide-in effect from right */
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Fade-in text effect */
+@keyframes fadeInText {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

@@ -1,0 +1,92 @@
+:root {
+  --yellow-theme-main-color: #fb24b7;
+  --nav-bg-color: #1f2937;
+  --nav-text-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* NavBar Styles */
+.header .navBar {
+  height: 80px;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo Container */
+.header .navBar__container {
+  display: flex;
+  align-items: center;
+}
+
+.header .navBar__container__logo {
+  color: var(--yellow-theme-main-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Menu Items */
+.header .navBar__container__menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header .navBar__container__menu_items {
+  display: flex;
+  align-items: center;
+}
+
+.header .navBar__container__menu_items_Links {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.header .navBar__container__menu_items_Links:hover {
+  color: var(--yellow-theme-main-color);
+}
+
+/* Toggle Icon */
+.header .toggle-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--nav-text-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header .navBar__container__menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: var(--nav-bg-color);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .header .navBar__container__menu.show {
+    display: flex;
+  }
+
+  .header .toggle-icon {
+    display: block;
+  }
+}

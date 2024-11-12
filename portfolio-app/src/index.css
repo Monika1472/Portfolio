@@ -1,0 +1,9 @@
+body{
+    background-image: url('./Assets/Background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+    padding: 0;
+    margin:0;
+}

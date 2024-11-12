@@ -1,0 +1,205 @@
+/* .Contact-info {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="button"]:nth-of-type(1) {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  button[type="button"]:nth-of-type(2) {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 768px) {
+    .Contact-info {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  }
+   */
+
+   /* Global Styles */
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Contact Form Container */
+  .Contact-info {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px; box-shadow: 0 4px 8px rgba(241, 93, 93, 0.1);
+    background-image: url('../../Assets/delicate-pink-white.jpg');
+    border-radius: 10px;
+   
+  }
+  
+  /* Form Header */
+  h1 {
+    margin-bottom: 20px;
+    color: #2351db;
+    text-align: center;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial,sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  /* Input Focus Effect */
+  input:focus, textarea:focus {
+    border-color: #f36baf;
+  }
+  
+  /* Textarea Styling */
+  textarea {
+    resize: vertical; /* Allow vertical resizing only */
+  }
+  
+  /* Error Message Styling */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Button Group Styles */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  
+  /* Button Hover Effect */
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Reset Button */
+  button[type="button"] {
+    background-color: #4aa5f5;
+    color: white;
+  }
+  
+  /* Submit Button */
+  button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .Contact-info {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    input, textarea {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

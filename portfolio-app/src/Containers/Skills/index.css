@@ -1,0 +1,160 @@
+/* .Skills-Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  
+  .Skills-box {
+    width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(241, 93, 93, 0.1);
+    background-image: url('../../Assets/delicate-pink-white.jpg');
+  }
+
+  .Skills-box h3{
+    text-align: center;
+  }
+  
+  .Skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .Skills-items h6 {
+    flex: 1 1 30%; 
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+   */
+   @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .Skills-Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  
+  .Skills-box {
+    width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(241, 93, 93, 0.1);
+    background-image: url('../../Assets/delicate-pink-white.jpg');
+    background-color: #fff;
+  }
+  
+  .Skills-box h3 {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .Skills-items, .Tools-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .Skills-items h6, .Tools-items h6 {
+    flex: 1 1 30%; /* Allows three items per row */
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* background: linear-gradient(90deg, #f58484 40%, #f5c9c9 60%);  */
+    background: linear-gradient(90deg, #2dcafa 40%, #f5c9c9 60%); 
+    opacity: 0; /* Start invisible for animation */
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  
+  
+  /* Adding staggered animation delays for each item */
+  .Skills-items h6:nth-child(1), .Tools-items h6:nth-child(1) { animation-delay: 0.1s; }
+  .Skills-items h6:nth-child(2), .Tools-items h6:nth-child(2) { animation-delay: 0.2s; }
+  .Skills-items h6:nth-child(3), .Tools-items h6:nth-child(3) { animation-delay: 0.3s; }
+  .Skills-items h6:nth-child(4), .Tools-items h6:nth-child(4) { animation-delay: 0.4s; }
+  .Skills-items h6:nth-child(5), .Tools-items h6:nth-child(5) { animation-delay: 0.5s; }
+  .Skills-items h6:nth-child(6), .Tools-items h6:nth-child(6) { animation-delay: 0.6s; }
+  
+ /* Media Queries for responsiveness */
+
+ /* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .Skills-box {
+    width: 90%;
+  }
+  .Skills-items h6, .Tools-items h6 {
+    flex: 1 1 calc(48%); /* Reduce width to ensure two items per row */
+    max-width: calc(48%);
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .Skills-box {
+    width: 95%;
+    padding: 20px;
+  }
+  .Skills-items h6, .Tools-items h6 {
+    flex: 1 1 50%; /* Further reduce width for smaller screens */
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Extra small devices (very small screens) */
+@media (max-width: 360px) {
+  .Skills-box {
+    width: 100%;
+    padding:10px;
+  }
+  .Skills-items h6, .Tools-items h6 {
+    flex: 1 1 50%; /* Ensuring two items per row on smallest screens */
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+.Skills-items h6,.Tools-items h6 {
+  border: 1px solid red; /* For debugging */
+}
+  
