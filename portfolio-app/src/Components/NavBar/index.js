@@ -7,7 +7,7 @@ import './index.css';
 const data=[
     {
         label:'Home',
-        to:"/"
+        to:'/'
     },
     {
         label:'About Me',
